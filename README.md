@@ -57,11 +57,13 @@ A result - most calling allocation is that function for 5 580 000 times in ~107 
  
 You need Go 1.12+ with module support (GO111MODULE=on) to build a project:
 
+
 ```shell script
 go build
 ```
 
 A command supports options to choose allocator and depth of binary trees:
+
 
 ```shell script
 ./binary-trees -allocator 0 21
@@ -76,6 +78,7 @@ Another option is run without compilation stage:
 ```shell script
 go run . -allocator 1 21
 ```
+
 
 ## Estimate CPU performance of allocators
 
