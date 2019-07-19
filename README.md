@@ -59,14 +59,18 @@ You need Go 1.12+ with module support (GO111MODULE=on) to build a project:
 
 
 ```shell script
+
 go build
+
 ```
 
 A command supports options to choose allocator and depth of binary trees:
 
 
-```shell script
+```shell
+
 ./binary-trees -allocator 0 21
+
 ```
 
 Supported allocators:
@@ -75,8 +79,10 @@ Supported allocators:
 
 Another option is run without compilation stage:
 
-```shell script
+```shell
+
 go run . -allocator 1 21
+
 ```
 
 
