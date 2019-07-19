@@ -55,35 +55,23 @@ A result - most calling allocation is that function for 5 580 000 times in ~107 
 
 ## Build and run 
  
-You need Go 1.12+ with module support (GO111MODULE=on) to build a project:
+You need Go 1.12+ with module support (GO111MODULE=on) to build or run a project:
 
 
-```shell script
-
+```shell
+# build
 go build
 
-```
-
-A command supports options to choose allocator and depth of binary trees:
-
-
-```shell
-
+# run
 ./binary-trees -allocator 0 21
 
+# run skipping build 
+go run . -allocator 1 21
 ```
 
-Supported allocators:
+A command supports options to choose allocator and depth of binary trees. Supported allocators:
 * 0 - naive (default)
 * 1 - buffered
-
-Another option is run without compilation stage:
-
-```shell
-
-go run . -allocator 1 21
-
-```
 
 
 ## Estimate CPU performance of allocators
@@ -94,9 +82,8 @@ An environment:
 * MacBook Pro 15 2012, Intel Core i7-3615QM (4 Cores), 16 Gb
 * 5 times run for each allocator
 * Estimate using a time command:
-   ```shell script
-   time ./binary-trees -allocator 1 21
-   ```
+   
+    time ./binary-trees -allocator 1 21
 
 The result:
 
