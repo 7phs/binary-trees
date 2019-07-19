@@ -1,7 +1,5 @@
 # Boost performance "binary trees" of a benchmark game more than 3x times
 
-[:octocat: https://github.com/7phs/binary-trees](https://github.com/7phs/binary-trees)
-
 [The Computer Language Benchmarks Game](https://benchmarksgame-team.pages.debian.net/benchmarksgame/index.html)
 is an excellent synthetic test for compilers. There is different kind of algorithmic tasks implemented using popular
 programming languages. 
