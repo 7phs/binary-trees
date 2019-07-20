@@ -55,7 +55,7 @@ type Message struct {
 	Text string
 }
 
-func inner(depth, iterations uint32, allocatorFabric AllocatorFabric) string {
+func inner(depth, iterations uint32, allocatorFabric AllocatorFactory) string {
 	chk := uint32(0)
 	for i := uint32(0); i < iterations; i++ {
 		chk += NewTree(
@@ -83,7 +83,7 @@ func main() {
 	run(uint32(n), GetAllocator())
 }
 
-func run(n uint32, allocatorFabric AllocatorFabric) {
+func run(n uint32, allocatorFabric AllocatorFactory) {
 	cpuCount := runtime.NumCPU()
 	sem := semaphore.NewWeighted(int64(cpuCount))
 

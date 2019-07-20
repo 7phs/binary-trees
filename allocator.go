@@ -19,7 +19,7 @@ type Allocator interface {
 	NewTree() *Tree
 }
 
-type AllocatorFabric func(uint32) Allocator
+type AllocatorFactory func(uint32) Allocator
 
 type AllocatorNaive struct{}
 
@@ -48,7 +48,7 @@ func (o *AllocatorBuffered) NewTree() (tree *Tree) {
 	return
 }
 
-func GetAllocator() AllocatorFabric {
+func GetAllocator() AllocatorFactory {
 	switch AllocatorSelected {
 	case Naive:
 		return NewAllocatorNaive
